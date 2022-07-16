@@ -4,6 +4,7 @@ class Dashboard_admin extends CI_Controller{
 	
 	public function __construct(){
 		parent::__construct();
+		
 		if($this->session->userdata('role_id') != '1'){
 			$this->session->set_flashdata('pesan','
 				<div class="alert alert-danger alert-dismissible fade show" role="alert">
